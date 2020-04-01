@@ -1,0 +1,17 @@
+<!--pages/event/event.wxml-->
+<view class="container">
+  <view class="header">
+    <text id="page-title">校友会活动</text>
+    <text id="search">搜</text>
+  </view>
+  <view class="navbar">
+    <view class="navbar-item navbar-selected" id="all-event">
+      <text>全部活动</text>
+    </view>
+    <view class="navbar-item" id="caa-event">
+      <text>校友会活动</text>
+    </view>
+  </view>
+  <view id="navbar-underline"></view>
+</view>
+<mp-tabbar style="position:fixed;bottom:0;width:100%;left:0;right:0;" list="{{list}}" bindchange="tabChange"></mp-tabbar>
