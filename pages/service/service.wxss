@@ -156,3 +156,7 @@ scroll-view {
   font-weight: 700;
 }
 
+.item-price.inactive {
+  color: gray;
+}
+
