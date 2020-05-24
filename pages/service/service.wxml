@@ -30,12 +30,12 @@
           </swiper-item>
         </swiper>
         <view class="list">
-          <block wx:for="{{dataList.mock.order.items}}" wx:for-item="item">
+          <block wx:for="{{items}}" wx:for-item="item">
             <view class="div-line"></view>
             <view class="list-el">
-              <image src="/image/animalcrossing.jpg" mode="aspectFill"></image>
+              <image src="{{item.img}}" mode="aspectFill"></image>
               <view class="list-el-text">
-                <text class="item-title">{{item.title}}</text>
+                <text class="item-title">{{item.name}}</text>
                 <text class="item-description">{{item.description}}</text>
                 <text class="item-price">¥{{item.price}}</text>
               </view>
@@ -55,14 +55,14 @@
           </swiper-item>
         </swiper>
         <view class="list">
-          <block wx:for="{{dataList.mock.career.items}}" wx:for-item="item">
+          <block wx:for="{{career}}" wx:for-item="item">
             <view class="div-line"></view>
             <view class="list-el">
               <image src="/image/animalcrossing.jpg" mode="aspectFill"></image>
               <view class="list-el-text">
-                <text class="item-title">{{item.title}}</text>
+                <text class="item-title">{{item.name}}</text>
                 <text class="item-description">{{item.type}}</text>
-                <text class="item-price">{{item.status}}</text>
+                <text class="item-price">{{item.valid}}</text>
               </view>
             </view>
           </block>
@@ -80,12 +80,12 @@
           </swiper-item>
         </swiper>
         <view class="list">
-          <block wx:for="{{dataList.mock.welfare.items}}" wx:for-item="item">
+          <block wx:for="{{welfare}}" wx:for-item="item">
             <view class="div-line"></view>
             <view class="list-el">
-              <image src="/image/animalcrossing.jpg" mode="aspectFill"></image>
+              <image src="{{item.img}}" mode="aspectFill"></image>
               <view class="list-el-text">
-                <text class="item-title">{{item.title}}</text>
+                <text class="item-title">{{item.name}}</text>
                 <text class="item-description">{{item.description}}</text>
                 <text class="item-price">{{item.status}}</text>
               </view>

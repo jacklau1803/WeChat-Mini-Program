@@ -1,5 +1,9 @@
 // pages/service/service.wxml.js
 import * as mock from './mock.js'
+const DB = wx.cloud.database({throwOnNotFound: false})
+const ITEMS = DB.collection("items")
+const CAREER = DB.collection("career")
+const WELFARE = DB.collection("welfare")
 Page({
 
   /**
@@ -88,9 +92,30 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(mock)
-    this.setData({
-      'dataList': mock
+    var that = this
+    ITEMS.get({
+      success: (res) => {
+        console.log(res)
+        that.setData({
+          'items': res.data
+        })
+      }
+    })
+    CAREER.get({
+      success: (res) => {
+        console.log(res)
+        that.setData({
+          'career': res.data
+        })
+      }
+    })
+    WELFARE.get({
+      success: (res) => {
+        console.log(res)
+        that.setData({
+          'welfare': res.data
+        })
+      }
     })
     console.log(this.data)
   },

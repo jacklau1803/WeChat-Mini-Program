@@ -1,0 +1,6 @@
+<!--pages/service/placeOrder/placeOrder.wxml-->
+<view class="container">
+  <form catchsubmit="formSubmit">
+    
+  </form>
+</view>

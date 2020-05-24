@@ -1,0 +1,24 @@
+<!--pages/service/careerDetail/careerDetail.wxml-->
+<view class="container">
+  <image src="/image/animalcrossing.jpg" mode="aspectFill"></image>
+  <view class="header-back"></view>
+  <view class="header">
+    <text class="title">腾讯WXG系统产品经理</text>
+    <text class="salary">170.00/天</text>
+    <text class="subtitle">广州｜产品经理</text>
+  </view>
+  <text class="req-title">招聘要求</text>
+  <view class="req">
+    <block wx:for="{{career.keywords}}" wx:for-item="keyword">
+      <text>{{keyword}}</text>
+    </block>
+  </view>
+  <text class="wf-title">工作福利</text>
+  <view class="welfare">
+    <!--block wx:for="{{career.keywords}}" wx:for-item="keyword"-->
+      <text>免费培训</text>
+    <!--/block-->
+  </view>
+  <text class="detail-title">工作福利</text>
+  <text class="detail">XXXXXXX</text>
+</view>
