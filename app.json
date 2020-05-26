@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/event/event",
     "pages/service/service",
+    "pages/event/event",
     "pages/service/placeOrder/placeOrder",
     "pages/service/orderDetail/orderDetail",
     "pages/service/careerDetail/careerDetail",

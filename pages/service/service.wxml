@@ -62,7 +62,8 @@
               <view class="list-el-text">
                 <text class="item-title">{{item.name}}</text>
                 <text class="item-description">{{item.type}}</text>
-                <text class="item-price">{{item.valid}}</text>
+                <text class="item-price" wx:if="{{item.valid}}">招聘中</text>
+                <text class="item-price inactive" wx:if="{{!item.valid}}">招聘结束</text>
               </view>
             </view>
           </view>
@@ -87,7 +88,8 @@
               <view class="list-el-text">
                 <text class="item-title">{{item.name}}</text>
                 <text class="item-description">{{item.description}}</text>
-                <text class="item-price">{{item.status}}</text>
+                <text class="item-price" wx:if="{{item.valid}}">开放中</text>
+                <text class="item-price inactive" wx:if="{{!item.valid}}">现已结束</text>
               </view>
             </view>
           </block>
