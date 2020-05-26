@@ -1,20 +1,42 @@
 // pages/service/careerDetail/careerDetail.js
+const DB = wx.cloud.database()
+const CAREER = DB.collection("career")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    career: {
-      keywords: ["月结", "大厂", "男女不限"]
-    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    CAREER.where({
+      _id: options.id
+    }).get({
+      success: (res) => {
+        console.log(res.data[0])
+        that.setData({
+          'career': res.data[0]
+        })
+      }
+    })
+    CAREER.where({
+      _id: options.id
+    }).update({
+      data:{
+        popularity: DB.command.inc(1)
+      },
+      success: function(res) {
+        console.log('success', res)
+      },
+      fail: function(res) {
+        console.log("failed to inc pop", res)
+      }
+    })
   },
 
   /**

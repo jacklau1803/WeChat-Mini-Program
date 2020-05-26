@@ -87,7 +87,30 @@ Page({
       url: '/pages/search/search',
     })
   },
-
+  toOrder(e) {
+    wx.navigateTo({
+      url: 'orderDetail/orderDetail?item_id?' + e.currentTarget.id,
+      fail: function(res){
+        console.log('navigate to order fail' + res)
+        wx.showToast({
+          title: '无法进入页面',
+          icon: 'none'
+        })
+      }
+    })
+  },
+  toCareer(e) {
+    wx.navigateTo({
+      url: 'careerDetail/careerDetail?item_id?' + e.currentTarget.id,
+      fail: function(res){
+        console.log('navigate to career fail' + res)
+        wx.showToast({
+          title: '无法进入页面',
+          icon: 'none'
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -95,7 +118,7 @@ Page({
     var that = this
     ITEMS.get({
       success: (res) => {
-        console.log(res)
+        console.log('items', res)
         that.setData({
           'items': res.data
         })
@@ -103,7 +126,7 @@ Page({
     })
     CAREER.get({
       success: (res) => {
-        console.log(res)
+        console.log('career', res)
         that.setData({
           'career': res.data
         })
@@ -111,7 +134,7 @@ Page({
     })
     WELFARE.get({
       success: (res) => {
-        console.log(res)
+        console.log('welfare',res)
         that.setData({
           'welfare': res.data
         })
