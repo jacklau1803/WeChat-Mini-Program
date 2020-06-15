@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/service/service",
+    "pages/search/search",
+    "pages/feedback/feedback",
     "pages/event/event",
     "pages/service/placeOrder/placeOrder",
     "pages/service/orderDetail/orderDetail",
@@ -8,7 +10,6 @@
     "pages/personalInfo/contact/contact",
     "pages/personalInfo/myInfo/myInfo",
     "pages/event/eventDetail/eventDetail",
-    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
